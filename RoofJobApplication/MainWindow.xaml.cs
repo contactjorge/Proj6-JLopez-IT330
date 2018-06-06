@@ -32,13 +32,13 @@ namespace RoofJobApplication
 	}
 		//Let filepath notate the file to save or open
 		const string _filePath = "RoofJobs.xml";
-
-		// Create XmlTextWriter object.
-		private XmlTextWriter _xmlWriter = new XmlTextWriter(_filePath, null);
 		
+		// Create XmlTextWriter object.
+		XmlTextWriter _xmlWriter = new XmlTextWriter(_filePath, null);
+
 		// Declare instance variables for inputs.
 		private string _cName, _cAddress, _cCity, _cState, _cZip, _cEstimate, _cWorkDesc;
-		
+
 		//Close the writer button
 		private void Button_Click(object sender, RoutedEventArgs e)
 		{
@@ -47,20 +47,30 @@ namespace RoofJobApplication
 		}
 
 		private void xmlWriter()
-		{
+		{			
+			//Set the format for XML File
+			_xmlWriter.Formatting = Formatting.Indented;
+			_xmlWriter.IndentChar = ' ';
+
+			// Write start element for root.
+			_xmlWriter.WriteStartElement(_filePath);
+
 			// Write Person element.
 			_xmlWriter.WriteStartElement("RoofJob");
-			_xmlWriter.WriteElementString("Customer Name", _cName);
-			_xmlWriter.WriteElementString("Customer Address", _cAddress);
-			_xmlWriter.WriteElementString("Customer City", _cCity);
-			_xmlWriter.WriteElementString("Customer State", _cState);
-			_xmlWriter.WriteElementString("Customer Zip", _cZip);
-			_xmlWriter.WriteElementString("Repair Estimate", _cEstimate);
-			_xmlWriter.WriteElementString("Work Description", _cWorkDesc);
+			_xmlWriter.WriteElementString("CustomerName", _cName);
+			_xmlWriter.WriteElementString("CustomerAddress", _cAddress);
+			_xmlWriter.WriteElementString("CustomerCity", _cCity);
+			_xmlWriter.WriteElementString("CustomerState", _cState);
+			_xmlWriter.WriteElementString("CustomerZip", _cZip);
+			_xmlWriter.WriteElementString("RepairEstimate", _cEstimate);
+			_xmlWriter.WriteElementString("WorkDescription", _cWorkDesc);
 			_xmlWriter.WriteEndElement();
 
 			// Write end element for root.
 			_xmlWriter.WriteEndElement();
+
+			// Close writer.
+			_xmlWriter.Close();
 		}
 		
 		private void btnSubmit_Click(object sender, RoutedEventArgs e)
@@ -73,12 +83,6 @@ namespace RoofJobApplication
 			_cZip = txtCustZip.Text;
 			_cEstimate = txtRepairEstimate.Text;
 			_cWorkDesc = txtWorkDescription.Text;
-			//Set the format for XML File
-			_xmlWriter.Formatting = Formatting.Indented;
-			_xmlWriter.IndentChar = ' ';
-
-			// Write start element for root.
-			_xmlWriter.WriteStartElement(_filePath);
 
 			//xmlWriter(_cName, _cAddress, _cCity, _cState, _cZip, _cEstimate, _cWorkDesc);
 			xmlWriter();
