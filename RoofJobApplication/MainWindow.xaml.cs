@@ -27,27 +27,15 @@ namespace RoofJobApplication
 
 			InitializeComponent();
 			
-		}
+	}
 		// Create XmlTextWriter object.
 		private XmlTextWriter _xmlWriter = new XmlTextWriter("RoofJob.xml", null);
-		
-		// Create StreamReader object.
-		//private StreamReader _xmlReader = new StreamReader("RoofJob.txt");
-		
+
 		// Declare instance variables for inputs.
 		private string _cName, _cAddress, _cCity, _cState, _cZip, _cEstimate, _cWorkDesc;
 
-		private void btnSubmit_Click(object sender, RoutedEventArgs e)
+		private void xmlWriter()
 		{
-			//Gather Data From Form
-			_cName = txtCustName.ToString();
-			_cAddress = txtCustAddress.ToString();
-			_cCity = txtCustCity.ToString();
-			_cState = txtCustZip.ToString();
-			_cZip = txtCustZip.ToString();
-			_cEstimate = txtRepairEstimate.ToString();
-			_cWorkDesc = txtWorkDescription.ToString();
-
 			//Set the format for XML File
 			_xmlWriter.Formatting = Formatting.Indented;
 			_xmlWriter.IndentChar = ' ';
@@ -71,6 +59,26 @@ namespace RoofJobApplication
 
 			// Close writer.
 			_xmlWriter.Close();
+		}
+
+		
+
+		private void btnSubmit_Click(object sender, RoutedEventArgs e)
+		{
+		//	List<RoofJobs> roofjobs = new List<RoofJobs>();
+			// stream = null;
+
+			//Gather Data From Form
+			_cName = txtCustName.Text;
+			_cAddress = txtCustAddress.Text;
+			_cCity = txtCustCity.Text;
+			_cState = txtCustZip.Text;
+			_cZip = txtCustZip.Text;
+			_cEstimate = txtRepairEstimate.Text;
+			_cWorkDesc = txtWorkDescription.Text;
+
+			//xmlWriter(_cName, _cAddress, _cCity, _cState, _cZip, _cEstimate, _cWorkDesc);
+			xmlWriter();
 		}
 	}
 }
