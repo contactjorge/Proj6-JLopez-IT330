@@ -24,59 +24,56 @@ namespace RoofJobApplication
 	{
 		public MainWindow()
 		{
+
 			InitializeComponent();
+			
 		}
+		// Create XmlTextWriter object.
+		private XmlTextWriter _xmlWriter = new XmlTextWriter("RoofJob.xml", null);
+		
+		// Create StreamReader object.
+		private StreamReader _xmlReader = new StreamReader("RoofJob.txt");
+		
+		// Declare instance variables for inputs.
+		private string _cName, _cAddress, _cCity, _cState, _cZip, _cEstimate, _cWorkDesc;
 
 		private void btnSubmit_Click(object sender, RoutedEventArgs e)
 		{
-			// Create XmlTextWriter object.
-			XmlTextWriter w = new XmlTextWriter("RoofJob.xml", null);
+			//Gather Data From Form
+			_cName = txtCustName.ToString();
+			_cAddress = txtCustAddress.ToString();
+			_cCity = txtCustCity.ToString();
+			_cState = txtCustZip.ToString();
+			_cZip = txtCustZip.ToString();
+			_cEstimate = txtRepairEstimate.ToString();
+			_cWorkDesc = txtWorkDescription.ToString();
 
-			// Create StreamReader object.
-			StreamReader r = new StreamReader("RoofJob.txt");
-
-			// Declare variables for inputs.
-			string cName, cAddress, cCity, cState, cZip, cEstimate, cJobDesc;
-			string[] fields;
-			cName = txtCustName.ToString();
-			cAddress = txtCustAddress.ToString();
-			cCity = txtCustCity.ToString();
-			cState = txtCustZip.ToString();
-			cZip = txtCustZip.ToString();
-			cEstimate = txtRepairEstimate.ToString();
-			cJobDesc = txtWorkDescription.ToString();
-			//
-			w.Formatting = Formatting.Indented;
-			w.IndentChar = ' ';
+			//Set the format for XML File
+			_xmlWriter.Formatting = Formatting.Indented;
+			_xmlWriter.IndentChar = ' ';
 
 			// Write start element for root.
-			w.WriteStartElement("RoofJobs");
+			_xmlWriter.WriteStartElement("RoofJobs");
 
-			while (r.Peek() != -1)
+			while (_xmlReader.Peek() != -1)
 			{
-				// Read line from input file.
-				line = r.ReadLine();
-				fields = line.Split(',');
-				name = fields[0];
-				gender = fields[1];
-				age = fields[2];
-
 				// Write Person element.
-				w.WriteStartElement("RoofJob");
-				w.WriteElementString("Customer Name", txtCustName);
-				w.WriteElementString("Customer Address", txtCustAddress);
-				w.WriteElementString("Customer City", name);
-				w.WriteElementString("Customer State", name);
-				w.WriteElementString("Customer Zip", gender);
-				w.WriteElementString("Age", age);
-				w.WriteEndElement();
+				_xmlWriter.WriteStartElement("RoofJob");
+				_xmlWriter.WriteElementString("Customer Name", _cName);
+				_xmlWriter.WriteElementString("Customer Address", _cAddress);
+				_xmlWriter.WriteElementString("Customer City", _cCity);
+				_xmlWriter.WriteElementString("Customer State", _cState);
+				_xmlWriter.WriteElementString("Customer Zip", _cZip);
+				_xmlWriter.WriteElementString("Repair Estimate", _cEstimate);
+				_xmlWriter.WriteElementString("Work Description", _cWorkDesc);
+				_xmlWriter.WriteEndElement();
 			}
 
 			// Write end element for root.
-			w.WriteEndElement();
+			_xmlWriter.WriteEndElement();
 
 			// Close writer.
-			w.Close();
+			_xmlWriter.Close();
 		}
 	}
 }
