@@ -50,14 +50,14 @@
 		<Label Content="Customer State" HorizontalAlignment="Left" Margin="0,0.454,0,25.046" VerticalAlignment="Center" Height="25" Width="133" Grid.Row="5" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
 		<Label Content="Customer Zip" HorizontalAlignment="Left" Margin="0.5,0.306,0,24.972" VerticalAlignment="Center" Height="25" Width="133" Grid.Row="5" Grid.ColumnSpan="3" Grid.Column="6" Grid.RowSpan="2"/>
 		<Label Content="Repair Cost Estimate" HorizontalAlignment="Left" Margin="0,24.5,0,0" Grid.Row="6" Grid.RowSpan="2" Name="lblRepairEstimate" VerticalAlignment="Top" Grid.ColumnSpan="3" Width="133" Height="26"/>
-		<Label Content="Repair Cost Estimate" HorizontalAlignment="Left" Grid.Row="9" VerticalAlignment="Top" Name="lblJob" Grid.ColumnSpan="3" Width="133" Height="25"/>
-		<TextBox Grid.ColumnSpan="10" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="66,0,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="596"/>
-		<TextBox Grid.ColumnSpan="4" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="66,0.5,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="199"/>
-		<TextBox Grid.ColumnSpan="4" Grid.Column="8" HorizontalAlignment="Left" Height="25" Margin="0,24.5,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="199" Grid.RowSpan="2"/>
-		<ComboBox Grid.ColumnSpan="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="199" Grid.Column="1" Margin="66,0,0,0" Grid.Row="5" Height="25"/>
+		<Label Content="Repair Cost Estimate" HorizontalAlignment="Left" Grid.Row="9" VerticalAlignment="Top" Name="lblWorkDescription" Grid.ColumnSpan="3" Width="133" Height="25"/>
+		<TextBox Grid.ColumnSpan="10" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="66,0,0,0" Grid.Row="1" TextWrapping="Wrap" Name="txtCustName" VerticalAlignment="Top" Width="596"/>
+		<TextBox Grid.ColumnSpan="4" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="66,0.5,0,0" Grid.Row="3" TextWrapping="Wrap" Name="txtCustAddress" VerticalAlignment="Top" Width="199"/>
+		<TextBox Grid.ColumnSpan="4" Grid.Column="8" HorizontalAlignment="Left" Height="25" Margin="0,24.5,0,0" Grid.Row="2" TextWrapping="Wrap" Name="txtCustCity" VerticalAlignment="Top" Width="199" Grid.RowSpan="2"/>
+		<ComboBox Grid.ColumnSpan="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="199" Name="comboState" Grid.Column="1" Margin="66,0,0,0" Grid.Row="5" Height="25"/>
 		<TextBox Grid.ColumnSpan="4" Grid.Column="8" HorizontalAlignment="Left" Height="25" Margin="1,0,0,0" Grid.Row="5" TextWrapping="Wrap" Name="txtCustZip" VerticalAlignment="Top" Width="199"/>
 		<TextBox Grid.ColumnSpan="9" Grid.Column="2" HorizontalAlignment="Left" Height="26" Margin="0.5,25,0,0" Grid.Row="6" Grid.RowSpan="2" Name="txtRepairEstimate" TextWrapping="Wrap" VerticalAlignment="Top" Width="595"/>
-		<TextBox Grid.ColumnSpan="10" Grid.Column="2" HorizontalAlignment="Left" Height="150" Margin="0.5,0,0,0" Grid.Row="9" TextWrapping="Wrap" Name="txtJob" VerticalAlignment="Top" Width="597" Grid.RowSpan="6"/>
-		<Button Grid.ColumnSpan="2" Content="Submit" Name="btnSubmit" Grid.Column="8" HorizontalAlignment="Left" Grid.Row="16" VerticalAlignment="Top" Width="132" Height="25"/>
+		<TextBox Grid.ColumnSpan="10" Grid.Column="2" HorizontalAlignment="Left" Height="150" Margin="0.5,0,0,0" Grid.Row="9" TextWrapping="Wrap" Name="txtWorkDescription" VerticalAlignment="Top" Width="597" Grid.RowSpan="6"/>
+		<Button Grid.ColumnSpan="2" Content="Submit" Name="btnSubmit" Grid.Column="9" HorizontalAlignment="Left" Grid.Row="16" VerticalAlignment="Top" Width="132" Height="25" Click="btnSubmit_Click"/>
 	</Grid>
 </Window>
