@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml;
+using Microsoft.Win32;
 
 namespace RoofJobApplication
 {
@@ -41,7 +42,7 @@ namespace RoofJobApplication
 			_xmlWriter.IndentChar = ' ';
 
 			// Write start element for root.
-			_xmlWriter.WriteStartElement("RoofJobs");
+			_xmlWriter.WriteStartElement("RoofJobs.xml");
 
 			// Write Person element.
 			_xmlWriter.WriteStartElement("RoofJob");
@@ -61,13 +62,8 @@ namespace RoofJobApplication
 			_xmlWriter.Close();
 		}
 
-		
-
 		private void btnSubmit_Click(object sender, RoutedEventArgs e)
 		{
-		//	List<RoofJobs> roofjobs = new List<RoofJobs>();
-			// stream = null;
-
 			//Gather Data From Form
 			_cName = txtCustName.Text;
 			_cAddress = txtCustAddress.Text;
@@ -79,6 +75,8 @@ namespace RoofJobApplication
 
 			//xmlWriter(_cName, _cAddress, _cCity, _cState, _cZip, _cEstimate, _cWorkDesc);
 			xmlWriter();
+
+
 		}
 	}
 }

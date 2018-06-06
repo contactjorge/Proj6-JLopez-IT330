@@ -57,7 +57,7 @@
 		<ComboBox Grid.ColumnSpan="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="199" Name="comboState" Grid.Column="1" Margin="66,0,0,0" Grid.Row="5" Height="25"/>
 		<TextBox Grid.ColumnSpan="4" Grid.Column="8" HorizontalAlignment="Left" Height="25" Margin="1,0,0,0" Grid.Row="5" TextWrapping="Wrap" Name="txtCustZip" VerticalAlignment="Top" Width="199"/>
 		<TextBox Grid.ColumnSpan="9" Grid.Column="2" HorizontalAlignment="Left" Height="26" Margin="0.5,25,0,0" Grid.Row="6" Grid.RowSpan="2" Name="txtRepairEstimate" TextWrapping="Wrap" VerticalAlignment="Top" Width="595"/>
-		<TextBox Grid.ColumnSpan="10" Grid.Column="2" HorizontalAlignment="Left" Height="150" Margin="0.5,0,0,0" Grid.Row="9" TextWrapping="Wrap" Name="txtWorkDescription" VerticalAlignment="Top" Width="597" Grid.RowSpan="6"/>
+		<TextBox Grid.ColumnSpan="10" Grid.Column="2" HorizontalAlignment="Left" Height="150" Margin="0.5,0,0,0" Grid.Row="9" TextWrapping="Wrap" Name="txtWorkDescription" VerticalAlignment="Top" Width="597" Grid.RowSpan="6" TextOptions.TextHintingMode="Animated" VerticalScrollBarVisibility="Visible" IsManipulationEnabled="True" AcceptsReturn="True" AcceptsTab="True"/>
 		<Button Grid.ColumnSpan="2" Content="Submit" Name="btnSubmit" Grid.Column="9" HorizontalAlignment="Left" Grid.Row="16" VerticalAlignment="Top" Width="132" Height="25" Click="btnSubmit_Click"/>
 	</Grid>
 </Window>
