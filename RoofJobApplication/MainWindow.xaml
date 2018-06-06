@@ -5,8 +5,59 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RoofJobApplication"
         mc:Ignorable="d"
-        Title="Roof Job Application" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Roof Job Application" Height="480" Width="800" UseLayoutRounding="False" Topmost="True" SnapsToDevicePixels="True" WindowStyle="ThreeDBorderWindow">
+	<Window.Background>
+		<SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ScrollBarColorKey}}"/>
+	</Window.Background>
+	<Grid UseLayoutRounding="False">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition />
+			<ColumnDefinition />
+			<ColumnDefinition />
+			<ColumnDefinition />
+			<ColumnDefinition />
+			<ColumnDefinition />
+			<ColumnDefinition />
+			<ColumnDefinition />
+			<ColumnDefinition />
+			<ColumnDefinition />
+			<ColumnDefinition />
+			<ColumnDefinition />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<Label Content="Customer Name"  HorizontalAlignment="Left" Margin="0,25,0,0.241" VerticalAlignment="Center" Height="25" Width="132" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+		<Label Content="Customer Address" HorizontalAlignment="Left" Margin="-1,24.759,0,0.444" VerticalAlignment="Center" Height="25" Width="133" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+		<Label Content="Customer City" HorizontalAlignment="Left" Margin="0.5,24.759,0,0.444" VerticalAlignment="Center" Height="25" Width="132" Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="6" Grid.RowSpan="2"/>
+		<Label Content="Customer State" HorizontalAlignment="Left" Margin="0,0.454,0,25.046" VerticalAlignment="Center" Height="25" Width="133" Grid.Row="5" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
+		<Label Content="Customer Zip" HorizontalAlignment="Left" Margin="0.5,0.306,0,24.972" VerticalAlignment="Center" Height="25" Width="133" Grid.Row="5" Grid.ColumnSpan="3" Grid.Column="6" Grid.RowSpan="2"/>
+		<Label Content="Repair Cost Estimate" HorizontalAlignment="Left" Margin="0,24.5,0,0" Grid.Row="6" Grid.RowSpan="2" Name="lblRepairEstimate" VerticalAlignment="Top" Grid.ColumnSpan="3" Width="133" Height="26"/>
+		<Label Content="Repair Cost Estimate" HorizontalAlignment="Left" Grid.Row="9" VerticalAlignment="Top" Name="lblJob" Grid.ColumnSpan="3" Width="133" Height="25"/>
+		<TextBox Grid.ColumnSpan="10" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="66,0,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="596"/>
+		<TextBox Grid.ColumnSpan="4" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="66,0.5,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="199"/>
+		<TextBox Grid.ColumnSpan="4" Grid.Column="8" HorizontalAlignment="Left" Height="25" Margin="0,24.5,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="199" Grid.RowSpan="2"/>
+		<ComboBox Grid.ColumnSpan="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="199" Grid.Column="1" Margin="66,0,0,0" Grid.Row="5" Height="25"/>
+		<TextBox Grid.ColumnSpan="4" Grid.Column="8" HorizontalAlignment="Left" Height="25" Margin="1,0,0,0" Grid.Row="5" TextWrapping="Wrap" Name="txtCustZip" VerticalAlignment="Top" Width="199"/>
+		<TextBox Grid.ColumnSpan="9" Grid.Column="2" HorizontalAlignment="Left" Height="26" Margin="0.5,25,0,0" Grid.Row="6" Grid.RowSpan="2" Name="txtRepairEstimate" TextWrapping="Wrap" VerticalAlignment="Top" Width="595"/>
+		<TextBox Grid.ColumnSpan="10" Grid.Column="2" HorizontalAlignment="Left" Height="150" Margin="0.5,0,0,0" Grid.Row="9" TextWrapping="Wrap" Name="txtJob" VerticalAlignment="Top" Width="597" Grid.RowSpan="6"/>
+		<Button Grid.ColumnSpan="2" Content="Submit" Name="btnSubmit" Grid.Column="8" HorizontalAlignment="Left" Grid.Row="16" VerticalAlignment="Top" Width="132" Height="25"/>
+	</Grid>
 </Window>
