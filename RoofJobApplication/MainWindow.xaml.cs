@@ -38,6 +38,13 @@ namespace RoofJobApplication
 		
 		// Declare instance variables for inputs.
 		private string _cName, _cAddress, _cCity, _cState, _cZip, _cEstimate, _cWorkDesc;
+		
+		//Close the writer button
+		private void Button_Click(object sender, RoutedEventArgs e)
+		{
+			// Close writer.
+			_xmlWriter.Close();
+		}
 
 		private void xmlWriter()
 		{
@@ -76,8 +83,8 @@ namespace RoofJobApplication
 			//xmlWriter(_cName, _cAddress, _cCity, _cState, _cZip, _cEstimate, _cWorkDesc);
 			xmlWriter();
 
-			// Close writer.
-			_xmlWriter.Close();
 		}
+
+
 	}
 }

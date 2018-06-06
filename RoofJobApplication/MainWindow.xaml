@@ -59,5 +59,6 @@
 		<TextBox Grid.ColumnSpan="9" Grid.Column="2" HorizontalAlignment="Left" Height="26" Margin="0.5,25,0,0" Grid.Row="6" Grid.RowSpan="2" Name="txtRepairEstimate" TextWrapping="Wrap" VerticalAlignment="Top" Width="595"/>
 		<TextBox Grid.ColumnSpan="10" Grid.Column="2" HorizontalAlignment="Left" Height="150" Margin="0.5,0,0,0" Grid.Row="9" TextWrapping="Wrap" Name="txtWorkDescription" VerticalAlignment="Top" Width="597" Grid.RowSpan="6" TextOptions.TextHintingMode="Animated" VerticalScrollBarVisibility="Visible" IsManipulationEnabled="True" AcceptsReturn="True" AcceptsTab="True"/>
 		<Button Grid.ColumnSpan="2" Content="Submit" Name="btnSubmit" Grid.Column="9" HorizontalAlignment="Left" Grid.Row="16" VerticalAlignment="Top" Width="132" Height="25" Click="btnSubmit_Click"/>
+		<Button Grid.ColumnSpan="3" Content="Close File" Name="btnCloseFile" Grid.Column="6" HorizontalAlignment="Left" Margin="0.5,0,0,0" Grid.Row="16" VerticalAlignment="Top" Width="133" Height="25" Click="Button_Click"/>
 	</Grid>
 </Window>
